@@ -1,0 +1,82 @@
+.second-layer {
+  position: relative; /* Necessary for absolute positioning of the image */
+  width: 100%; /* Full width of the container */
+  height: 600px; /* Set a specific height for the container */
+  overflow: hidden; /* Hides any overflow */
+}
+
+.second-section {
+  padding: 20px;
+  color: #1f1f1fe7;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+  max-width: 700px; 
+  padding-top: 400px; 
+  margin-top: -400px;  
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1f1f1f;
+  font-size: 65px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: white;
+  border-radius: 4px;
+  opacity: 0; /* Initial opacity for fade-in */
+  animation: fadeIn 1.5s ease-out forwards; /* Fade-in animation */
+}
+.second-section span {
+  color: #f1f1f1;
+}
+
+/* Add this CSS to make the image responsive */
+.donationPic {
+  position: fixed; /* Fix the image in the viewport */
+  width: 100%; /* Full width of the viewport */
+  height: 90vh; /* Match the height of the container */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Position at the left of the viewport */
+  z-index: -1; /* Send the image behind other content */
+}
+
+/* Media Queries */
+@media (max-width: 575px) {
+  .text {
+    font-size: 45px; /* Adjust size */
+    padding: 0 1rem; /* Adjust padding for smaller screen */
+  }
+  
+  .second-layer {
+    height: 40vh; /* Adjust height */
+  }
+}
+
+@media (max-width: 540px) {
+  .text {
+    font-size: 35px; /* Adjust size */
+    padding: 0 0.8rem; /* Adjust padding */
+  }
+}
+
+@media (max-width: 435px) {
+  .text {
+    font-size: 28px; /* Adjust size */
+  }
+}
